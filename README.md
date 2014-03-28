@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/mojodna/tilelive-csvin.png)](https://travis-ci.org/mojodna/tilelive-csvin)
+
 # tilelive-csvin
 
 A [tilelive](https://github.com/mapbox/tilelive.js) provider for CSV inputs
