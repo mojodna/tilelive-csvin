@@ -26,6 +26,10 @@ new CSV("csvin+file://./data.csv?delimiter=\tencoding=base64", function(err, src
 });
 ```
 
+## Supported Protocols
+
+This provider understands the `file:` (e.g. `csvin+file://./stuff.csv`) and `stdin:` protocols.
+
 ## Why?
 
 CSV is a popular format with the Big Data set.
