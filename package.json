@@ -1,0 +1,36 @@
+{
+  "name": "tilelive-csvin",
+  "version": "0.0.0",
+  "description": "A streaming tilelive source for CSV inputs",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Seth Fitzsimmons <seth@mojodna.net>",
+  "license": "ISC",
+  "homepage": "https://github.com/mojodna/tilelive-csvin",
+  "bugs": "https://github.com/mojodna/tilelive-csvin/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mojodna/tilelive-csvin.git"
+  },
+  "dependencies": {
+    "buffertools": "^2.1.1",
+    "base64-stream": "^0.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.2"
+  },
+  "jshintConfig": {
+    "node": true,
+    "globalstrict": true,
+    "curly": true,
+    "sub": true,
+    "indent": 2,
+    "newcap": true,
+    "white": false,
+    "undef": true,
+    "unused": true,
+    "maxlen": 100
+  }
+}
