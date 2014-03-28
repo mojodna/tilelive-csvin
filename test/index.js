@@ -5,7 +5,7 @@ var assert = require("assert"),
     stream = require("stream");
 
 var BinaryStreamSplitter = require("../lib/binary-stream-splitter"),
-    CSVDecoder = require("../").CSVDecoder;
+    CSVDecoder = require("../lib/csv-decoder");
 
 describe("CSVDecoder", function() {
   it("should split base64-encoded input", function(done) {
