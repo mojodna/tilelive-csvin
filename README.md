@@ -19,7 +19,7 @@ var MBTiles = require("mbtiles"),
 
 var CSV = require("tilelive-csv")(tilelive);
 
-new CSV("csvin+file://./data.csv?delimiter=\tencoding=base64", function(err, src) {
+new CSV("csvin+file://./data.csv?delimiter=\t&encoding=base64", function(err, src) {
   new MBTiles("mbtiles://./tiles.mbtiles", function(err, sink) {
     src.createReadStream().pipe(sink.createWriteStream());
   });
