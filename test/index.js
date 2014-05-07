@@ -15,7 +15,7 @@ describe("CSVDecoder", function() {
 
     input
       .pipe(new BinaryStreamSplitter())
-      .pipe(new CSVDecoder("\t", "base64"))
+      .pipe(new CSVDecoder(1, "\t", "base64"))
       .pipe(new stream.PassThrough({ objectMode: true })
               .on("data", function(data) {
                 var chunks = [];

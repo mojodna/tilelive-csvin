@@ -22,7 +22,8 @@ module.exports = function(tilelive, options) {
   };
 
   CSV.prototype.createReadStream = function() {
-    var delimiter = this.uri.query.delimiter || ",",
+    var columnIndex = (this.uri.query.columnIndex || 1) | 0,
+        delimiter = this.uri.query.delimiter || ",",
         encoding = this.uri.query.encoding || null,
         source,
         readStream = new stream.PassThrough({

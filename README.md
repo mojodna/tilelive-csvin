@@ -26,6 +26,15 @@ new CSV("csvin+file://./data.csv?delimiter=\t&encoding=base64", function(err, sr
 });
 ```
 
+### Options
+
+The following query parameters are recognized:
+
+* `delimiter` - Column delimiter. Defaults to `,`.
+* `encoding` - Option source encoding. Defaults to `null`. Other valid values:
+  `base64`.
+* `columnIndex` - 0-based index for the column containing data. Defaults to `1`.
+
 ## Supported Protocols
 
 This provider understands the `file:` (e.g. `csvin+file://./stuff.csv`) and `stdin:` protocols.
