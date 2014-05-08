@@ -25,10 +25,10 @@ module.exports = function(tilelive, options) {
     var columnIndex = (this.uri.query.columnIndex || 1) | 0,
         delimiter = this.uri.query.delimiter || ",",
         encoding = this.uri.query.encoding || null,
-        source,
         readStream = new stream.PassThrough({
           objectMode: true
-        });
+        }),
+        source;
 
     switch (this.uri.protocol.toLowerCase()) {
     case "file:":
