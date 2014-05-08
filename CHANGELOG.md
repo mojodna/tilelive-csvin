@@ -1,5 +1,9 @@
 # Changes
 
+## v0.2.2 - 5/8/14
+
+* Correctly handle chunked column data
+
 ## v0.2.1 - 5/7/14
 
 * Actually use `columnIndex` when instantiating `CSVDecoder`
