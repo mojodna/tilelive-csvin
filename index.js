@@ -47,7 +47,7 @@ module.exports = function(tilelive, options) {
 
     source
       .pipe(new BinaryStreamSplitter())
-      .pipe(new CSVDecoder(delimiter, encoding))
+      .pipe(new CSVDecoder(columnIndex, delimiter, encoding))
       .pipe(readStream);
 
     return readStream;
