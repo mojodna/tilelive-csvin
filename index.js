@@ -2,7 +2,6 @@
 
 var fs = require("fs"),
     path = require("path"),
-    stream = require("stream"),
     url = require("url");
 
 var BinaryStreamSplitter = require("./lib/binary-stream-splitter"),
@@ -25,9 +24,6 @@ module.exports = function(tilelive, options) {
     var columnIndex = (this.uri.query.columnIndex || 1) | 0,
         delimiter = this.uri.query.delimiter || ",",
         encoding = this.uri.query.encoding || null,
-        readStream = new stream.PassThrough({
-          objectMode: true
-        }),
         source;
 
     switch (this.uri.protocol.toLowerCase()) {
@@ -45,12 +41,9 @@ module.exports = function(tilelive, options) {
       throw new Error("Unsupported protocol: " + this.uri.protocol);
     }
 
-    source
+    return source
       .pipe(new BinaryStreamSplitter())
-      .pipe(new CSVDecoder(columnIndex, delimiter, encoding))
-      .pipe(readStream);
-
-    return readStream;
+      .pipe(new CSVDecoder(columnIndex, delimiter, encoding));
   };
 
   CSV.registerProtocols = function(tilelive) {
