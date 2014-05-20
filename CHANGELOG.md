@@ -1,5 +1,10 @@
 # Changes
 
+## v0.2.3 - 5/19/14
+
+* Add an "anti delimiter" (e.g. `\r` when the input shouldn't be split on the
+  `\n` in `\r\n`)
+
 ## v0.2.2 - 5/8/14
 
 * Correctly handle chunked column data
