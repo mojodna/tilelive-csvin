@@ -1,5 +1,10 @@
 # Changes
 
+## v0.2.4 - 5/21/14
+
+* Stop leaking streams in `BinaryStreamSplitter`--this allows writable tilelive
+  modules to complete successfully.
+
 ## v0.2.3 - 5/19/14
 
 * Add an "anti delimiter" (e.g. `\r` when the input shouldn't be split on the
