@@ -1,5 +1,9 @@
 # Changes
 
+## v0.2.5 - 6/5/14
+
+* Handle escaped characters (e.g. `\t`) provided via the command line.
+
 ## v0.2.4 - 5/21/14
 
 * Stop leaking streams in `BinaryStreamSplitter`--this allows writable tilelive
