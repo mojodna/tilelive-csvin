@@ -26,6 +26,16 @@ module.exports = function(tilelive, options) {
         encoding = this.uri.query.encoding || null,
         source;
 
+    delimiter = delimiter
+      .replace(/\\b/, "\b")
+      .replace(/\\t/, "\t")
+      .replace(/\\n/, "\n")
+      .replace(/\\v/, "\v")
+      .replace(/\\f/, "\f")
+      .replace(/\\r/, "\r")
+      .replace(/\\"/, "\"")
+      .replace(/\\'/, "\'");
+
     switch (this.uri.protocol.toLowerCase()) {
     case "file:":
       source = fs.createReadStream(path.resolve(path.join(this.uri.host, this.uri.pathname)));
