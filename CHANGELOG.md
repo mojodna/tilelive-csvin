@@ -1,5 +1,10 @@
 # Changes
 
+## v0.2.6 - 6/9/14
+
+* Explicitly set `highWaterMark` to 32 objects
+* Bugfix: `CSVDecoder._transform` should always call back
+
 ## v0.2.5 - 6/5/14
 
 * Handle escaped characters (e.g. `\t`) provided via the command line.
