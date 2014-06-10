@@ -1,5 +1,11 @@
 # Changes
 
+## v0.2.9 - 6/10/14
+
+* Use `ColumnFilter`'s `end` event for tracking pending streams, not
+  `coordinates`
+* Handle recursive `_flush`ing properly
+
 ## v0.2.8 - 6/10/14
 
 * Don't EOF before all streams have been written
