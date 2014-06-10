@@ -1,6 +1,6 @@
 {
   "name": "tilelive-csvin",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "A streaming tilelive source for CSV inputs",
   "main": "index.js",
   "scripts": {
