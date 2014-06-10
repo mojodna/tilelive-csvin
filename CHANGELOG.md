@@ -1,9 +1,13 @@
 # Changes
 
+## v0.2.8 - 6/10/14
+
+* Don't EOF before all streams have been written
+
 ## v0.2.7 - 6/9/14
 
-Work-around for regression due to node@9520ade (`\`s replaced with `/`s),
-affecting node-0.10.27+
+* Work-around for regression due to node@9520ade (`\`s replaced with `/`s),
+  affecting node-0.10.27+
 
 ## v0.2.6 - 6/9/14
 
