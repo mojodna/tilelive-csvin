@@ -27,14 +27,14 @@ module.exports = function(tilelive, options) {
         source;
 
     delimiter = delimiter
-      .replace(/\\b/, "\b")
-      .replace(/\\t/, "\t")
-      .replace(/\\n/, "\n")
-      .replace(/\\v/, "\v")
-      .replace(/\\f/, "\f")
-      .replace(/\\r/, "\r")
-      .replace(/\\"/, "\"")
-      .replace(/\\'/, "\'");
+      .replace(/[\\\/]b/, "\b")
+      .replace(/[\\\/]t/, "\t")
+      .replace(/[\\\/]n/, "\n")
+      .replace(/[\\\/]v/, "\v")
+      .replace(/[\\\/]f/, "\f")
+      .replace(/[\\\/]r/, "\r")
+      .replace(/[\\\/]"/, "\"")
+      .replace(/[\\\/]'/, "\'");
 
     switch (this.uri.protocol.toLowerCase()) {
     case "file:":
