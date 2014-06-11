@@ -1,5 +1,9 @@
 # Changes
 
+## v0.2.11 - 6/11/14
+
+* Fix broken v0.2.10.
+
 ## v0.2.10 - 6/11/14
 
 * Don't drop tiles that are split between chunks.
