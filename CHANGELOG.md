@@ -1,5 +1,9 @@
 # Changes
 
+## v0.2.10 - 6/11/14
+
+* Don't drop tiles that are split between chunks.
+
 ## v0.2.9 - 6/10/14
 
 * Use `ColumnFilter`'s `end` event for tracking pending streams, not
